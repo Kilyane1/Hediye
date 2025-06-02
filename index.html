@@ -11,10 +11,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('/Hediye/arkaplan.jpg'); /* Hediye klasöründeki arka plan resmi */
+            background-image: url('/Hediye/image.png'); /* İlk arka plan resmi */
             background-size: cover;
             background-position: center;
             font-family: Arial, sans-serif;
+            transition: background-image 0.5s ease-in-out; /* Arka plan değişimi için geçiş efekti */
         }
         #giftButton {
             padding: 15px 30px;
@@ -53,14 +54,18 @@
 <body>
     <button id="giftButton" onclick="showGift()">Hediye için tıkla</button>
     <div id="giftSection">
-        <img id="giftImage" src="/Hediye/Foto.jpg" alt="Hediye Fotoğrafı"> <!-- Hediye klasöründeki hediye resmi -->
+        <img id="giftImage" src="/Hediye/Foto1.jpg" alt="Hediye Fotoğrafı">
         <div id="birthdayMessage">İYİKİ DOĞDUN KARDEŞİM</div>
     </div>
 
     <script>
         function showGift() {
+            // Butonu gizle
             document.getElementById('giftButton').style.display = 'none';
+            // Hediye bölümünü göster
             document.getElementById('giftSection').style.display = 'flex';
+            // Arka planı değiştir
+            document.body.style.backgroundImage = "url('/Hediye/Adsız.png')";
         }
     </script>
 </body>
