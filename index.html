@@ -16,6 +16,7 @@
             background-position: center;
             font-family: Arial, sans-serif;
             transition: background-image 0.5s ease-in-out; /* Arka plan değişimi için geçiş efekti */
+            position: relative; /* Ekledim: Yazıyı sayfanın altına taşımak için */
         }
         #giftButton {
             padding: 15px 30px;
@@ -25,10 +26,10 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: backgorund-color 0.3s;
+            transition: background-color 0.3s; /* Yazım hatası düzeltildi */
         }
         #giftButton:hover {
-            background-color: #000000;
+            background-color: #333333; /* Renk değişimi eklendi */
         }
         #giftSection {
             display: none;
@@ -43,13 +44,17 @@
             border-radius: 10px;
             margin-bottom: 20px;
         }
+        /* Değiştirilen kısım: Yazının boyutu küçültüldü ve pozisyonu değiştirildi */
         #birthdayMessage {
-            font-size: 30px;
+            position: absolute; /* Ekledim: Sayfanın altına taşımak için */
+            bottom: 40px; /* Ekledim: Sayfanın altından 40px yukarıda */
+            left: 0;
+            right: 0;
+            font-size: 24px; /* Önceki: 30px */
             font-weight: bold;
             color: #ffffff;
             text-align: center;
-            left: 50;
-            down: 150;
+            text-shadow: 0 0 10px rgba(0,0,0,0.7); /* Ekledim: Okunabilirlik için */
         }
     </style>
 </head>
